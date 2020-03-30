@@ -11351,3 +11351,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .ni-vimeo-fill:before {
   content: ""; }
+
+/*custom*/
+.doctor-avatar{
+  width:12rem;
+  height: 12rem;
+}
