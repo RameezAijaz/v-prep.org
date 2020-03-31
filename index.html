@@ -22,12 +22,12 @@
             <div class="nk-navbar is-light is-sticky" id="navbar">
                 <div class="container">
                     <div class="nk-navbar-wrap">
-                        <div class="nk-navbar-logo logo">
-                            <a href="./" class="logo-link">
-                                <img class="logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="logo">
-                                <img class="logo-light" src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
-                            </a>
-                        </div><!-- .nk-navbar-logo -->
+                        <!--<div class="nk-navbar-logo logo">-->
+                            <!--<a href="./" class="logo-link">-->
+                                <!--<img class="logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="logo">-->
+                                <!--<img class="logo-light" src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">-->
+                            <!--</a>-->
+                        <!--</div>&lt;!&ndash; .nk-navbar-logo &ndash;&gt;-->
                         <div class="nk-navbar-toggle d-lg-none">
                             <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em class="icon-close icon ni ni-cross"></em></a>
                         </div><!-- .nk-navbar-toggle -->
@@ -39,10 +39,13 @@
                                 <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#prevention">Prevention</a></li>
                                 <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#treatment">Treatment</a></li>
                                 <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#faq">FAQ</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#teamOfDoctors">Our Doctors</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#doctorsSection">Our Doctors</a></li>
                             </ul>
                             <ul class="nk-menu-btns">
                                 <li class="nk-menu-item"><a href="#protect" class="btn btn-sm scrollto nav-link">Do &amp; Don’t</a></li>
+
+                                <li class="nk-menu-item" style="margin-left: 0.8rem"><a href="#callOurTeam" class="btn btn-sm scrollto nav-link" style="background-color: #3bca3b"><span>Contact Our Team</span><em class="icon ni ni-call"></em></a></li>
+
                             </ul>
                         </nav><!-- .nk-navbar-menu -->
                     </div><!-- .nk-navbar-wrap -->
@@ -959,13 +962,13 @@
                 </div><!-- .container -->
             </section><!-- .section -->
 
-            <section class="section section-l bg-light section-blog" id="callOurTeam">
+            <section class="section section-l bg-light section-blog" id="callOurTeam" style="visibility: hidden">
                 <div class="container">
                     <div class="section-head text-center wide-lg">
                         <h5 class="subtitle">Voice for Peace, Education & Prosperity (V-PEP)</h5>
                         <h2 class="title">Contact Our Health Educators For Daily Updates & Resources</h2>
                     </div><!-- .section-head -->
-                    <div class="section-content">
+                    <div class="section-content" id="listOfEducators">
                         <div class="row g-gs justify-content-center">
                             <div class="col-md-9 col-lg-4">
                                 <div class="blog-item">
@@ -1026,96 +1029,13 @@
                 </div><!-- .container -->
             </section><!-- .section -->
 
-            <section class="section section-l bg-light section-blog" id="teamOfDoctors">
+            <section class="section section-l bg-light section-blog" id="doctorsSection" style="display: none">
                 <div class="container">
                     <div class="section-head text-center wide-lg">
                         <h5 class="subtitle">Voice for Peace, Education & Prosperity (V-PEP)</h5>
                         <h2 class="title">Our Team of Doctors</h2>
                     </div><!-- .section-head -->
-                    <div class="section-content">
-                        <div class="row g-gs justify-content-center">
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-female.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Husna Hajira</h5>
-                                        <b>Primary Care</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-female.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Farah Farooqui</h5>
-                                        <b>Primary Care</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-male.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Talha Shakir</h5>
-                                        <b>Primary Care</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                        <div class="row g-gs justify-content-center">
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-female.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Naila Khurshid</h5>
-                                        <b>Internal Med</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-male.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Arain & Team</h5>
-                                        <b>Pulmonologist</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-female.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Azka Afzal</h5>
-                                        <b>Internal Med</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                        <div class="row g-gs justify-content-center">
-                            <div class="col-md-9 col-lg-4">
-                                <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="images/avatars/doctor-female.png" alt="" class="doctor-avatar">
-                                    </div>
-                                    <div class="blog-text">
-                                        <h5 class="title">Dr. Yasmeen Khan</h5>
-                                        <b>Clinical Psychologist</b>
-                                     </div>
-                                </div><!-- .blog-item -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
+                    <div class="section-content" id="listOfDoctors">
                     </div><!-- .section-content -->
                 </div><!-- .container -->
             </section><!-- .section -->
@@ -1130,18 +1050,11 @@
                             <div class="col-lg-3 col-md-9 mr-auto">
                                 <div class="wgs wgs-about">
                                     <div class="wgs-logo logo">
-                                        <a href="./" class="logo-link">
-                                            <img src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
-                                        </a>
+                                        <h3>V-PEP</h3>
                                     </div>
                                     <div class="wgs-about-text">
                                         <p>This website is for health information and advice about coronavirus (COVID-19), how to prevent and protect yourself from disease.</p>
-                                        <p>Learn about the government response to coronavirus on GOV.UK.</p>
                                     </div>
-                                    <ul class="wgs-social">
-                                        <li><a target="_blank" href="https://twitter.com/naila_usmani"><em class="icon ni ni-twitter"></em></a></li>
-                                        <li><a target="_blank" href="https://www.linkedin.com/in/n-u-92737731"><em class="icon ni ni-linkedin"></em></a></li>
-                                    </ul>
                                 </div><!-- .wgs -->
                             </div><!-- .col -->
                             <div class="col-sm-4 col-lg-2">
@@ -1198,5 +1111,155 @@
 	<!-- JavaScript -->
 	<script src="assets/js/bundle.js?ver=100"></script>
 	<script src="assets/js/scripts.js?ver=100"></script>
+    <script>
+        function initClient() {
+
+            gapi.client.init({
+                'apiKey': 'AIzaSyA1ESqCrVzE7vIXY9xky_lcmlNCsTbFcMY',
+                // Your API key will be automatically added to the Discovery Document URLs.
+                'discoveryDocs': ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+                // clientId and scope are optional if auth is not required.
+                'clientId': '1020718466026-c7jbm9a2mg63i3v16kpkbjdsslr5g92r.apps.googleusercontent.com',
+                'scope': "https://www.googleapis.com/auth/spreadsheets.readonly",
+            }).then(function() {
+                gapi.client.sheets.spreadsheets.values.get({
+                    spreadsheetId: '1hrSlGqHMx2hvwLgMj8We-BSkOpkKGHopP9nbgjb_Dk0',
+                    range: 'Physicians!A6:R30'
+                }).then(function(response) {
+                    if(!response || !response.result || !response.result.values)
+                        return;
+                    var doctors = [];
+                    for(var i=0; i<response.result.values.length; i++){
+                        var doctor = response.result.values[i];
+                        if(!doctor || !doctor[1])
+                            continue;
+                        doctors.push({
+                            name:doctor[1],
+                            speciality:doctor[2]
+                        });
+                    }
+                    var htmlToInsert = getHtml(doctors);
+                    document.getElementById('listOfDoctors').innerHTML=htmlToInsert;
+                    document.getElementById('doctorsSection').style.display='';
+
+                }).catch(function(err){
+                    //console.log(err);
+                });
+                gapi.client.sheets.spreadsheets.values.get({
+                    spreadsheetId: '1hrSlGqHMx2hvwLgMj8We-BSkOpkKGHopP9nbgjb_Dk0',
+                    range: 'HealthEducators!A2:k30'
+                }).then(function(response) {
+                    if(!response || !response.result || !response.result.values)
+                        return;
+                    var educators = [];
+                    for(var i=0; i<response.result.values.length; i++){
+                        var educator = response.result.values[i];
+                        if(!educator || !educator[1])
+                            continue;
+                        educators.push({
+                            name:educator[1],
+                            phone:educator[2],
+                            hours:educator.splice(3)
+                        });
+                    }
+
+                    var htmlToInsert = getHtml(educators, 'images/avatars/educator.png');
+                    document.getElementById('listOfEducators').innerHTML=htmlToInsert;
+                    document.getElementById('callOurTeam').style.visibility='visible';
+
+
+                }).catch(function(err){
+                    //console.log(err);
+                });
+            });
+        }
+
+        function getHtml(people, icon){
+            if(!people || people.length<1)
+                return;
+            icon=icon||'images/avatars/doctor.png';
+            var htmlToInsert = '<div class="row g-gs justify-content-center">';
+
+            for(var i=0; i<people.length; i++){
+                var person= people[i],
+                    name = person.name,
+                    phone = person.phone?'<b>'+person.phone+'</b><hr/>':'',
+                    speciality=person.speciality?'<b>'+person.speciality+'</b><hr/>':'',
+                    daysAndHours = person.hours ? getDaysAndHours(person.hours):'',
+                    daysAndHourElement = daysAndHours?'<b>'+daysAndHours+'</b><hr/>':'';
+                if(!name)
+                    break;
+
+                if(i>0 && i%3===0){
+                    htmlToInsert+='</div><div class="row g-gs justify-content-center">';
+                }
+                htmlToInsert+='<div class="col-md-9 col-lg-4">\n' +
+                    '                                <div class="blog-item">\n' +
+                    '                                    <div class="blog-image">\n' +
+                    '                                        <img src="'+icon+'" alt="" class="doctor-avatar">\n' +
+                    '                                    </div>\n' +
+                    '                                    <div class="blog-text">\n' +
+                    '                                        <h5 class="title">'+name+'</h5>\n<hr/>' + speciality+ phone + daysAndHourElement+
+                    '                                     </div>\n' +
+                    '                                </div><!-- .blog-item -->\n' +
+                    '                            </div>';
+
+
+            }
+            htmlToInsert+='</div>';
+
+            return htmlToInsert;
+        }
+
+        function getDaysAndHours(weekTime){
+            var days=['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+            var result="";
+            var prevTime="";
+            var prevIndex=0;
+            for(var i=0; i<weekTime.length; i++){
+                var currentTime = weekTime[i].trim();
+                if(currentTime && !prevTime){
+                    prevTime = weekTime[i].trim();
+                    prevIndex=i;
+                    if(i===weekTime.length-1){
+                        if(prevTime)
+                            result+=days[prevIndex]+" ("+prevTime+")</br>";
+                    }
+                    continue;
+                }
+                if(currentTime.length<1)
+                    continue;
+                if(prevTime !== currentTime){
+                    if(prevIndex===i-1){
+                        result+=days[prevIndex]+" ("+prevTime+")</br>";
+                        result+=days[i]+" ("+currentTime+")</br>";
+                    }
+                    else if(currentTime){
+                        result+=days[prevIndex]+"-"+ days[i-1]+" ("+prevTime+")</br>";
+                    }
+
+                    prevIndex=i;
+                    prevTime=currentTime;
+
+                }
+                if(i===weekTime.length-1){
+                    if(prevTime)
+                        result+=days[prevIndex]+"-"+ days[i]+" ("+prevTime+")</br>";
+                }
+
+            }
+            return result;
+
+        }
+
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+    </script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </body>
 </html>
