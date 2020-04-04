@@ -45,7 +45,7 @@
                             <ul class="nk-menu-btns">
                                 <li class="nk-menu-item"><a href="#protect" class="btn btn-sm scrollto nav-link">Do &amp; Don’t</a></li>
 
-                                <li class="nk-menu-item" style="margin-left: 0.8rem"><a href="#callOurTeam" class="btn btn-sm scrollto nav-link" style="background-color: #3bca3b"><span>Contact Our Team</span><em class="icon ni ni-call"></em></a></li>
+                                <li class="nk-menu-item" style="margin-left: 0.8rem"><a href="#callOurTeam" class="btn btn-sm scrollto nav-link" style="background-color: #3bca3b"><span>Contact Us</span><em class="icon ni ni-call"></em></a></li>
 
                             </ul>
                         </nav><!-- .nk-navbar-menu -->
@@ -59,7 +59,7 @@
                 <h1 class="heading">
                     <span style="color: #26a526;">V-PEP</span> Tele-Health & Tele-Medicine Campaign
                 </h1>
-                    <h3>Our team consists of Tele-Health Educators & Tele-Medicine Physicians who are ready to help you every day!</h3>
+                    <h3>Our Physicians are Ready to Help All Day & Every Day of the Week! <br/> Calls are Returned within an Hour!</h3>
                 </div>
             </div>
             <div class="nk-banner" style="padding-top: 0px">
@@ -86,7 +86,7 @@
 
                                     <ul class="nk-banner-btns">
                                         <li><a href="#protect" class="btn scrollto"><span>How to Protect</span><em class="icon ni ni-shield-half"></em></a></li>
-                                        <li><a href="#callOurTeam" class="btn scrollto" style="background-color: #3bca3b"><span>Contact Our Team</span><em class="icon ni ni-call"></em></a></li>
+                                        <li><a href="#callOurTeam" class="btn scrollto" style="background-color: #3bca3b"><span>Contact Covid-19 Task Force</span><em class="icon ni ni-call"></em></a></li>
                                         <li><a href="#about" class="btn btn-transparent scrollto"><span>About COVID-19</span><em class="icon ni ni-arrow-right"></em></a></li>
                                     </ul>
                                     <div class="status">
@@ -967,18 +967,20 @@
             <section class="section section-l bg-light section-blog" id="callOurTeam" style="display: none">
                 <div class="container">
                     <div class="section-head text-center wide-lg">
-                        <h5 class="subtitle">Contact Our Health Educators For Daily Updates & Resources.</h5>
-                        <h2 class="title">V-PEP's Tele-Health Educators & <br/>Tele-Medicine Physicians!</h2>
+                        <h5 class="subtitle">Call Today for a Free Coronavirus <br/> Health Screening & Resources!</h5>
+                        <h2><strong>V-PEP's</strong> Covid-19 Non <br/> Emergency Task Force Helpline: <br/><a style="cursor: pointer" href="tel:6306395577">(630) 639-5577</a></h2>
+
                     </div><!-- .section-head -->
                     <div class="section-content" id="listOfEducators">
                     </div><!-- .section-content -->
                 </div><!-- .container -->
             </section><!-- .section -->
 
-            <section class="section section-l bg-light section-blog" id="doctorsSection" style="display: none">
+            <section class="section section-l bg-light section-blog" id="doctorsSection" style="display: none; padding-top: 2rem;">
                 <div class="container">
                     <div class="section-head text-center wide-lg">
-                        <h2 class="title">VPEP's Team Of Physicians</h2>
+                        <h5 class="subtitle">VPEP's Team Of Physicians</h5>
+                        <h2 class="title">Our Physicians are Ready to Help All Day & Every Day of the Week!</h2>
                     </div><!-- .section-head -->
                     <div class="section-content" id="listOfDoctors">
                     </div><!-- .section-content -->
@@ -1000,13 +1002,15 @@
                                     <div class="wgs-logo logo">
                                         <h3 style="color: #26a526;">V-PEP</h3>
                                         <h5>Voice for Peace, Education & Prosperity</h5>
-                                        <h6>voiceforpep@gmail.com</h6>
-                                        <img src="images/logo-imana.png" alt="">
-                                        <p>V-PEP is part of IMANA Covid-19 Task Force.</p>
+                                        <h6>Donate: <a href="mailto:voiceforpep@gmail.com" target="_top">voiceforpep@gmail.com</a></h6>
+                                        <h6>Tax ID# <code>850603723</code></h6>
+                                        <a style="cursor: pointer" target="_blank" href="https://imana.org/"><img style="height: 1.4rem" src="images/logo-imana.png" alt=""></a>
+                                        <a style="cursor: pointer" target="_blank" href="https://www.ciogc.org/"><img style="height: 1.4rem" src="images/coig.png" alt=""></a>
+                                        <a style="cursor: pointer" target="_blank" href="https://appna.org/"><img style="height: 1.4rem; background-color: white" src="images/aapna.png" alt=""></a>
                                     </div>
-                                    <div class="wgs-about-text">
-                                        <p>This website is for health information and advice about coronavirus (COVID-19), how to prevent and protect yourself from disease.</p>
-                                    </div>
+                                    <!--<div class="wgs-about-text">-->
+                                        <!--<p>This website is for health information and advice about coronavirus (COVID-19), how to prevent and protect yourself from disease.</p>-->
+                                    <!--</div>-->
                                 </div><!-- .wgs -->
                             </div><!-- .col -->
                             <div class="col-sm-4 col-lg-2">
@@ -1134,7 +1138,7 @@
             for(var i=0; i<people.length; i++){
                 var person= people[i],
                     name = person.name,
-                    phone = person.phone?'<b>'+person.phone+'</b><hr/>':'',
+                    phone = person.phone?'<a style="cursor: pointer" href="tel:6306395577">(630) 639-5577</a><hr/>':'',
                     speciality=person.speciality?'<b>'+person.speciality+'</b><hr/>':'',
                     daysAndHours = person.hours ? getDaysAndHours(person.hours):'',
                     daysAndHourElement = daysAndHours?'<b>'+daysAndHours+'</b><hr/>':'';
