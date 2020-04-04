@@ -195,7 +195,7 @@ h6, .h6, .fz-6 { font-size: 1rem; }
 .nk-banner-block .heading-sm { display: flex; flex-direction: column; margin-top: .3125rem; margin-left: 0.25rem; }
 .nk-banner-block .heading-sm .sup { font-size: 1rem; color: #f86168; letter-spacing: 0.04em; }
 .nk-banner-block .heading-sm .sub { font-size: 1.875rem; margin-top: .125rem; }
-.nk-banner-block .status { padding-top: 30px; }
+.nk-banner-block .status { padding-top: 20px; }
 .nk-banner-btns { display: flex; align-items: center; flex-wrap: wrap; margin: -.25rem -.75rem; padding-top: .5rem; }
 .nk-banner-btns li { padding: .25rem .75rem; }
 
@@ -205,7 +205,7 @@ h6, .h6, .fz-6 { font-size: 1rem; }
   .nk-banner-block .heading-sm { margin-top: .375rem; margin-left: 0.5rem; }
   .nk-banner-block .heading-sm .sup { font-size: 1.375rem; }
   .nk-banner-block .heading-sm .sub { font-size: 2.5rem; margin-top: 0; }
-  .nk-banner-block .status { padding-top: 60px; }
+  .nk-banner-block .status { padding-top: 20px; }
   .nk-banner-btns { margin: -.5rem -1.25rem; padding-top: .5rem; }
   .nk-banner-btns li { padding: .5rem 1.25rem; } }
 @media (max-width: 991px) { .nk-banner-image { max-width: 400px; margin-left: auto; margin-right: auto; } }
@@ -214,7 +214,7 @@ h6, .h6, .fz-6 { font-size: 1rem; }
   .nk-banner-block .heading-sm { margin-top: .4375rem; margin-left: 0.5rem; }
   .nk-banner-block .heading-sm .sup { font-size: 1.75rem; }
   .nk-banner-block .heading-sm .sub { font-size: 3rem; }
-  .nk-banner-block .status { padding-top: 80px; }
+  .nk-banner-block .status { padding-top: 20px; }
   .nk-banner-btns { padding-top: 1.25rem; }
   .nk-banner-image { margin-left: -130px; margin-right: -60px; } }
 @media (min-width: 1540px) { .nk-banner-block { margin-right: -20px; }
@@ -222,7 +222,7 @@ h6, .h6, .fz-6 { font-size: 1rem; }
   .nk-banner-block .heading { font-size: 6.25rem; }
   .nk-banner-block .heading-sm .sup { font-size: 2rem; }
   .nk-banner-block .heading-sm .sub { font-size: 3.5rem; }
-  .nk-banner-block .status { padding-top: 120px; }
+  .nk-banner-block .status { padding-top: 20px; }
   .nk-banner-image { margin-left: -20px; margin-right: -185px; } }
 /** 05.2 Status */
 .status-item .title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #7d92bb; }
