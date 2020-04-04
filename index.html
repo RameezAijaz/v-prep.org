@@ -1162,8 +1162,9 @@
                             continue;
                         educators.push({
                             name:educator[1],
-                            phone:educator[2],
-                            hours:educator.splice(3)
+                            speciality:educator[2],
+                            phone:educator[3],
+                            hours:educator.splice(4)
                         });
                     }
 
@@ -1217,41 +1218,49 @@
 
         function getDaysAndHours(weekTime){
             var days=['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+            if(weekTime.length===0)
+                return "";
             var result="";
             var prevTime="";
-            var prevIndex=0;
+            var prevDay = "";
             for(var i=0; i<weekTime.length; i++){
-                var currentTime = weekTime[i].trim();
-                if(currentTime && !prevTime){
-                    prevTime = weekTime[i].trim();
-                    prevIndex=i;
-                    if(i===weekTime.length-1){
-                        if(prevTime)
-                            result+=days[prevIndex]+" ("+prevTime+")</br>";
-                    }
+
+                var time = weekTime[i].trim();
+
+                if(!prevTime && time){
+                    prevTime = time;
+                    prevDay=days[i];
+                    result+=days[i];
                     continue;
                 }
-                if(currentTime.length<1)
-                    continue;
-                if(prevTime !== currentTime){
-                    if(prevIndex===i-1){
-                        result+=days[prevIndex]+" ("+prevTime+")</br>";
-                        result+=days[i]+" ("+currentTime+")</br>";
-                    }
-                    else if(currentTime){
-                        result+=days[prevIndex]+"-"+ days[i-1]+" ("+prevTime+")</br>";
-                    }
 
-                    prevIndex=i;
-                    prevTime=currentTime;
-
+                if(time === prevTime){
+                    prevTime = time;
                 }
-                if(i===weekTime.length-1){
-                    if(prevTime)
-                        result+=days[prevIndex]+"-"+ days[i]+" ("+prevTime+")</br>";
-                }
+                if(time !== prevTime){
+                    if(prevDay !== days[i-1]){
+                        result+="-"+days[i-1];
+                    }
+                    result+=" ("+prevTime+") </br>";
 
+                    if(time){
+                        prevDay=days[i];
+                        prevTime=time;
+                    }
+                    else{
+                        prevTime="";
+                        prevDay="";
+                    }
+                }
             }
+
+            if(time === prevTime){
+                if(prevDay !== days[i-1]){
+                    result+="-"+days[i-1];
+                }
+                result+=" ("+time+") \n";
+            }
+
             return result;
 
         }
