@@ -12,6 +12,7 @@
     <!-- Bundle and Base CSS -->
     <link rel="stylesheet" href="assets/css/bundle.css?ver=100">
     <link rel="stylesheet" href="assets/css/styles.css?ver=100">
+    <link rel="stylesheet" href="assets/css/animate.css">
 </head>
 
 <body class="nk-body">
@@ -93,23 +94,23 @@
                                             <div class="col-sm-4 col-6">
                                                 <div class="status-item">
                                                     <h6 class="title">Worldwide Cases</h6>
-                                                    <div class="h3 count">245,850</div>
+                                                    <div class="h3 count animated fadeInRight" id="worldWideCasses" style="display: none"></div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4 col-6">
                                                 <div class="status-item">
                                                     <h6 class="title">Deaths</h6>
-                                                    <div class="h3 count">10,047</div>
+                                                    <div class="h3 count animated fadeInRight" id="worldWideDeaths" style="display: none"></div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4 col-6">
                                                 <div class="status-item">
                                                     <h6 class="title">Recovered</h6>
-                                                    <div class="h3 count">88,441</div>
+                                                    <div class="h3 count animated fadeInRight" id="worldWideRecovered" style="display: none"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="status-note">*  Last updated: March 20, 2020, 05:04 GMT</div>
+                                        <div class="status-note animated fadeInRight delay-3s" id="lastUpdated"></div>
                                     </div><!-- .status -->
                                 </div><!-- .content -->
                             </div><!-- .nk-banner-block -->
@@ -1266,9 +1267,55 @@
 
         }
 
+        function fetchCovidStats(){
+            fetch('https://corona.lmao.ninja/all').then((response) => {
+                return response.json();
+            }).then((data) => {
+                    console.log(data);
+                    printIncrementally(data.cases, "worldWideCasses");
+
+                    printIncrementally(data.deaths, "worldWideDeaths");
+
+                    printIncrementally(data.recovered, "worldWideRecovered");
+
+                    var lastUpdate = new Date(data.updated),
+                    monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+                    document.getElementById("lastUpdated").innerText = '*  Last updated: '+monthNames[lastUpdate.getMonth()]+' '+lastUpdate.getDate()+', '+lastUpdate.getFullYear()+', '+lastUpdate.getHours()+':'+lastUpdate.getMinutes()+' GMT.'
+                    document.getElementById("lastUpdated").style.display='block';
+
+
+            })
+        }
+
+        function printIncrementally(data, elemId){
+
+            let totalCases = data||0;
+            let start = 0,
+                end = 10000;
+            while(totalCases>10000){
+                totalCases = (totalCases>=10000)?(totalCases-10000):totalCases;
+                start=end;
+                end+= (totalCases>10000?10000:totalCases);
+                for (var i = start; i <= end; i+=(totalCases>10000?1000:1)) {
+                    (function(index) {
+                        setTimeout(function() {
+
+                            document.getElementById(elemId).innerText=index.toLocaleString();
+                            if(document.getElementById(elemId).style.display === 'none')
+                                document.getElementById(elemId).style.display = 'block';
+
+                            }, 200);
+                    })(i);
+                }
+            }
+        }
+
         function handleClientLoad() {
             gapi.load('client:auth2', initClient);
         }
+        fetchCovidStats();
     </script>
 
     <script async defer src="https://apis.google.com/js/api.js"
