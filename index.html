@@ -967,9 +967,8 @@
             <section class="section section-l bg-light section-blog" id="callOurTeam" style="display: none">
                 <div class="container">
                     <div class="section-head text-center wide-lg">
-                        <h5 class="subtitle">Call Today for a Free Coronavirus <br/> Health Screening & Resources!</h5>
-                        <h2><strong>V-PEP's</strong> Covid-19 Non <br/> Emergency Task Force Helpline: <br/><a style="cursor: pointer" href="tel:6306395577">(630) 639-5577</a></h2>
-
+                        <h5 class="subtitle">Contact Our Health Educators For Daily Updates & Resources.</h5>
+                        <h2 class="title">V-PEP's Tele-Health Educators</h2>
                     </div><!-- .section-head -->
                     <div class="section-content" id="listOfEducators">
                     </div><!-- .section-content -->
@@ -1113,7 +1112,7 @@
                         educators.push({
                             name:educator[1],
                             speciality:educator[2],
-                            phone:true,
+                            phone:educator[3],
                             hours:educator.splice(4)
                         });
                     }
@@ -1138,7 +1137,7 @@
             for(var i=0; i<people.length; i++){
                 var person= people[i],
                     name = person.name,
-                    phone = person.phone?'<a style="cursor: pointer" href="tel:6306395577">(630) 639-5577</a><hr/>':'',
+                    phone = person.phone?'<a style="cursor: pointer" href="tel:'+person.phone+'">'+person.phone+'</a><hr/>':'',
                     speciality=person.speciality?'<b>'+person.speciality+'</b><hr/>':'',
                     daysAndHours = person.hours ? getDaysAndHours(person.hours):'',
                     daysAndHourElement = daysAndHours?'<b>'+daysAndHours+'</b><hr/>':'';
