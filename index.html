@@ -1216,7 +1216,7 @@
         }
 
         function fetchCovidStats(){
-            fetch('https://corona.lmao.ninja/all').then((response) => {
+            fetch('https://coronavirus-19-api.herokuapp.com/all').then((response) => {
                 return response.json();
             }).then((data) => {
                     printIncrementally(data.cases, "worldWideCasses");
