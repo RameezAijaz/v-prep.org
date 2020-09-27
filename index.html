@@ -1067,6 +1067,12 @@
 	<!-- JavaScript -->
 	<script src="assets/js/bundle.js?ver=100"></script>
 	<script src="assets/js/scripts.js?ver=100"></script>
+	
+	
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>	
     <script>
         function initClient() {
 
@@ -1243,12 +1249,12 @@
 
             let totalCases = data||0;
             let start = 0,
-                end = 10000;
-            while(totalCases>10000){
-                totalCases = (totalCases>=10000)?(totalCases-10000):totalCases;
+                end = 100000;
+            while(totalCases>100000){
+                totalCases = (totalCases>=100000)?(totalCases-100000):totalCases;
                 start=end;
-                end+= (totalCases>10000?10000:totalCases);
-                for (var i = start; i <= end; i+=(totalCases>10000?1000:1)) {
+                end+= (totalCases>100000?100000:totalCases);
+                for (var i = start; i <= end; i+=(totalCases>100000?10000:1)) {
                     (function(index) {
                         setTimeout(function() {
 
@@ -1256,7 +1262,7 @@
                             if(document.getElementById(elemId).style.display === 'none')
                                 document.getElementById(elemId).style.display = 'block';
 
-                            }, 200);
+                            }, 100);
                     })(i);
                 }
             }
@@ -1266,11 +1272,6 @@
             gapi.load('client:auth2', initClient);
         }
         fetchCovidStats();
-    </script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-            onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 </body>
 </html>
