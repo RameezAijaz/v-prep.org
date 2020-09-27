@@ -1243,7 +1243,7 @@
         }
 
         function print(data, elemId){
-               document.getElementById(elemId).innerText=data;
+               document.getElementById(elemId).innerText=data.toLocaleString();
 		
                if(document.getElementById(elemId).style.display === 'none')
                   document.getElementById(elemId).style.display = 'block';
