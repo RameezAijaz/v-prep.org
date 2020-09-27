@@ -1068,11 +1068,7 @@
 	<script src="assets/js/bundle.js?ver=100"></script>
 	<script src="assets/js/scripts.js?ver=100"></script>
 	
-	
-    <script async defer src="https://apis.google.com/js/api.js"
-            onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>	
+
     <script>
         function initClient() {
 
@@ -1228,11 +1224,12 @@
             fetch('https://coronavirus-19-api.herokuapp.com/all').then((response) => {
                 return response.json();
             }).then((data) => {
-                    printIncrementally(data.cases, "worldWideCasses");
+		    
+                    print(data.cases, "worldWideCasses");
 
-                    printIncrementally(data.deaths, "worldWideDeaths");
+                    print(data.deaths, "worldWideDeaths");
 
-                    printIncrementally(data.recovered, "worldWideRecovered");
+                    print(data.recovered, "worldWideRecovered");
 
                    // var lastUpdate = new Date(data.updated),
                     // monthNames = ["January", "February", "March", "April", "May", "June",
@@ -1245,27 +1242,11 @@
             })
         }
 
-        function printIncrementally(data, elemId){
-
-            let totalCases = data||0;
-            let start = 0,
-                end = 500000;
-            while(totalCases>500000){
-                totalCases = (totalCases>=500000)?(totalCases-500000):totalCases;
-                start=end;
-                end+= (totalCases>500000?500000:totalCases);
-                for (var i = start; i <= end; i+=(totalCases>500000?500000:1)) {
-                    (function(index) {
-                        setTimeout(function() {
-
-                            document.getElementById(elemId).innerText=index.toLocaleString();
-                            if(document.getElementById(elemId).style.display === 'none')
-                                document.getElementById(elemId).style.display = 'block';
-
-                            }, 10);
-                    })(i);
-                }
-            }
+        function print(data, elemId){
+               document.getElementById(elemId).innerText=data;
+		
+               if(document.getElementById(elemId).style.display === 'none')
+                  document.getElementById(elemId).style.display = 'block';
         }
 
         function handleClientLoad() {
@@ -1273,5 +1254,9 @@
         }
         fetchCovidStats();
     </script>
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>	
 </body>
 </html>
