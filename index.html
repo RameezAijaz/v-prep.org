@@ -1254,7 +1254,7 @@
                 totalCases = (totalCases>=100000)?(totalCases-100000):totalCases;
                 start=end;
                 end+= (totalCases>100000?100000:totalCases);
-                for (var i = start; i <= end; i+=(totalCases>100000?10000:1)) {
+                for (var i = start; i <= end; i+=(totalCases>100000?100000:1)) {
                     (function(index) {
                         setTimeout(function() {
 
@@ -1262,7 +1262,7 @@
                             if(document.getElementById(elemId).style.display === 'none')
                                 document.getElementById(elemId).style.display = 'block';
 
-                            }, 100);
+                            }, 10);
                     })(i);
                 }
             }
