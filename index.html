@@ -1249,12 +1249,12 @@
 
             let totalCases = data||0;
             let start = 0,
-                end = 100000;
-            while(totalCases>100000){
-                totalCases = (totalCases>=100000)?(totalCases-100000):totalCases;
+                end = 500000;
+            while(totalCases>500000){
+                totalCases = (totalCases>=500000)?(totalCases-500000):totalCases;
                 start=end;
-                end+= (totalCases>100000?100000:totalCases);
-                for (var i = start; i <= end; i+=(totalCases>100000?100000:1)) {
+                end+= (totalCases>500000?500000:totalCases);
+                for (var i = start; i <= end; i+=(totalCases>500000?500000:1)) {
                     (function(index) {
                         setTimeout(function() {
 
